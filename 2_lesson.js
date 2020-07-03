@@ -69,19 +69,19 @@ class SinglyLinkedList {
         this.length++
         return this
     }
-    get(val) {
-        if (val > this.length && val >= 0) return undefined
-        if (val === 0) return this.head.val
+    get(index) {
+        if (index < 0 || index >= this.length) return null
 
-        let currentNode = this.head
         let count = 0
+        let currentNode = this.head
 
-        while (count === val) {
+
+        while (count !== index) {
             currentNode = currentNode.next
             count++
         }
 
-        return currentNode.val
+        return currentNode
     }
 }
 
