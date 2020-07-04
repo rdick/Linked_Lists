@@ -83,13 +83,27 @@ class SinglyLinkedList {
 
         return currentNode
     }
+    set(index, newVal) {
+        var foundNode = this.get(index)
+        if (foundNode) {
+            foundNode.val = newVal
+            return true
+        }
+        return false
+    }
+
 }
 
 var list = new SinglyLinkedList()
 list.push('hello')
 list.push('hello1')
 list.push('hello2')
-list.get(2)
+list.insert(0, '1')
+list.remove(1)
+// list.insert(0, 1)
+// list.insert(1, 2)
+// list.insert(3, 3)
+
 // list.pop()
 // list.push('hello3')
 
