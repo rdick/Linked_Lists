@@ -139,7 +139,7 @@ class SinglyLinkedList {
     }
 }
 
-// Metrics of Linked List
+// BIG O of Linked List
 // Insertion - O (1)
 // Removal   - O (1) or O (N) depending if removal is at the beginning middle or end of list
 // Searching - O (N)
