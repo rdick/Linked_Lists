@@ -122,6 +122,7 @@ class SinglyLinkedList {
         return removed
     }
     reverse() {
+        // https://medium.com/outco/reversing-a-linked-list-easy-as-1-2-3-560fbffe2088
 
         let following = this.head
         let current = this.head
