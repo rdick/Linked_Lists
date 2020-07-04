@@ -91,6 +91,21 @@ class SinglyLinkedList {
         }
         return false
     }
+    insert(index, val) {
+        if (index < 0 || index > this.length) return false
+
+        if (this.length === index) return !!this.push(val)
+        if (index === 0) return !!this.unshift(val)
+
+        let previousNode = this.get(index - 1)
+        let newNode = new Node(val);
+
+        let temp = previousNode.next
+        previousNode.next = newNode
+        newNode.next = temp
+        this.length++
+        return true
+    }
 
 }
 
